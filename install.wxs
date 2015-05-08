@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="e0962691-21b0-4a83-a720-7e90dd43c0f8" 
+           UpgradeCode="e0962691-21b0-4a83-a720-001000000000"
+           Name="SharePoint Online PowerShell Cmdlets by Gary Lapointe"
+           Version="1.2.2" 
+           Manufacturer="Falchion Consulting, LLC" 
+           Language="1033" 
+           Codepage="1252">
+    
+    <Package Id="*" 
+             InstallerVersion="200" 
+             Compressed="yes" 
+             Comments="Copyright 2014 Falchion Consulting, LLC"
+             Description="A Microsoft SharePoint Online Services Module for Windows PowerShell developed by Gary Lapointe."
+             Keywords="SharePoint, PowerShell"/>
+
+    <Media Id="1" Cabinet="Lapointe.SharePointOnline.PowerShell.cab" EmbedCab="yes"/>
+
+    <!--<Upgrade Id="04410879-C05F-4B59-8950-44968F42856B">
+      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0" Maximum="1.1.0" IncludeMinimum="yes" IncludeMaximum="no" />
+    </Upgrade>-->
+
+    <!--<InstallExecuteSequence>
+      <RemoveExistingProducts Before="InstallInitialize" />
+    </InstallExecuteSequence>-->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="Falchion" Name="Falchion Consulting, LLC">
+          <Directory Id="INSTALLDIR" Name="SharePoint Online PowerShell">
+            <Directory Id="ModuleFolder" Name="Lapointe.SharePointOnline.PowerShell">
+              <Component Id="MainDlls" Guid="60AA1270-980D-4972-B4C7-D03D0E37398F">
+                <File Id="Lapointe.PowerShell.MamlGenerator.dll" Name="Lapointe.PowerShell.MamlGenerator.dll" Source="Lapointe.PowerShell.MamlGenerator.dll" />
+                <File Id="Lapointe.SharePointOnline.PowerShell.dll" Name="Lapointe.SharePointOnline.PowerShell.dll" Source="Lapointe.SharePointOnline.PowerShell.dll" KeyPath="yes" />
+              </Component>
+              <Component Id="Microsoft.SharePoint.Client" Guid="81BE8D93-F232-4053-9FCB-76D497A6F515">
+                <File Id="Microsoft.Office.Client.Policy.dll" Name="Microsoft.Office.Client.Policy.dll" Source="Microsoft.Office.Client.Policy.dll" />
+                <File Id="Microsoft.Office.Client.TranslationServices.dll" Name="Microsoft.Office.Client.TranslationServices.dll" Source="Microsoft.Office.Client.TranslationServices.dll" />
+                <File Id="Microsoft.SharePoint.Client.dll" Name="Microsoft.SharePoint.Client.dll" Source="Microsoft.SharePoint.Client.dll" KeyPath="yes" />
+                <File Id="Microsoft.SharePoint.Client.DocumentManagement.dll" Name="Microsoft.SharePoint.Client.DocumentManagement.dll" Source="Microsoft.SharePoint.Client.DocumentManagement.dll" />
+                <File Id="Microsoft.SharePoint.Client.Publishing.dll" Name="Microsoft.SharePoint.Client.Publishing.dll" Source="Microsoft.SharePoint.Client.Publishing.dll" />
+                <File Id="Microsoft.SharePoint.Client.Runtime.dll" Name="Microsoft.SharePoint.Client.Runtime.dll" Source="Microsoft.SharePoint.Client.Runtime.dll" />
+                <File Id="Microsoft.SharePoint.Client.Search.Applications.dll" Name="Microsoft.SharePoint.Client.Search.Applications.dll" Source="Microsoft.SharePoint.Client.Search.Applications.dll" />
+                <File Id="Microsoft.SharePoint.Client.Search.dll" Name="Microsoft.SharePoint.Client.Search.dll" Source="Microsoft.SharePoint.Client.Search.dll" />
+                <File Id="Microsoft.SharePoint.Client.Taxonomy.dll" Name="Microsoft.SharePoint.Client.Taxonomy.dll" Source="Microsoft.SharePoint.Client.Taxonomy.dll" />
+                <File Id="Microsoft.SharePoint.Client.UserProfiles.dll" Name="Microsoft.SharePoint.Client.UserProfiles.dll" Source="Microsoft.SharePoint.Client.UserProfiles.dll" />
+                <File Id="Microsoft.SharePoint.Client.WorkflowServices.dll" Name="Microsoft.SharePoint.Client.WorkflowServices.dll" Source="Microsoft.SharePoint.Client.WorkflowServices.dll" />
+              </Component>
+              <Component Id="Help" Guid="88B89ED2-2BB9-4C7A-BABA-17847D190123">
+                <File Id="Lapointe.SharePointOnline.PowerShell.dll.help.xml" Name="Lapointe.SharePointOnline.PowerShell.dll-help.xml" Source="Lapointe.SharePointOnline.PowerShell.dll-help.xml" KeyPath="yes" />
+              </Component>
+              <Component Id="Format" Guid="66025EB7-FC58-4719-B695-AAB796E8A853" >
+                <File Id="Lapointe.SharePointOnline.PowerShell.ps1xml" Name="Lapointe.SharePointOnline.PowerShell.ps1xml" Source="Lapointe.SharePointOnline.PowerShell.ps1xml" KeyPath="yes" />
+              </Component>
+              <Component Id="Module" Guid="E152AA36-60E4-4A19-A0D9-29F6A0C2469A">
+                <File Id="Lapointe.SharePointOnline.PowerShell.psd1" Name="Lapointe.SharePointOnline.PowerShell.psd1" Source="Lapointe.SharePointOnline.PowerShell.psd1" KeyPath="yes" />
+              </Component>
+              <Component Id="PSModulePath" Guid="BB595B3C-471C-4B62-8BF2-7566368734C8">
+                <CreateFolder />
+                <Environment Id="PSModulePathVariable" 
+                             Action="set" 
+                             Part="last" 
+                             Name="PSModulePath" 
+                             Permanent="no" 
+                             System="yes" 
+                             Value="[INSTALLDIR]" />
+
+              </Component>
+              
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <!--<Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="ProgramMenuDir" Name="Falchion">
+          <Component Id="ProgramMenuDir" Guid="2CCC5E45-A3F3-4D31-A8B2-D6F79B1E4E32">
+            <Shortcut Id="ApplicationShortcut1" Name="SharePoint Online Management Shell" IconIndex="0"
+                      Description="Automatically loads the Lapointe.SharePointOnline.PowerShell module in a PowerShell console."
+                      Target="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoExit -Command &quot;Import-Module Lapointe.SharePointOnline.PowerShell;&quot;" 
+                      WorkingDirectory="INSTALLDIR" />
+            <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>-->
+
+    </Directory>
+
+    <Feature Id="DefaultFeature" Level="1" Display="hidden"
+             Title="SharePoint Online PowerShell Cmdlets by Gary Lapointe"
+             Description="A Microsoft SharePoint Online Services Module for Windows PowerShell developed by Gary Lapointe."
+             ConfigurableDirectory="INSTALLDIR">
+      <ComponentRef Id="MainDlls" />
+      <ComponentRef Id="Microsoft.SharePoint.Client" />
+      <ComponentRef Id="Help" />
+      <ComponentRef Id="Format" />
+      <ComponentRef Id="Module" />
+      <ComponentRef Id="PSModulePath" />
+      <!--<ComponentRef Id="ProgramMenuDir" />-->
+    </Feature>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <UIRef Id="WixUI_InstallDir" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    
+    <WixVariable Id="WixUILicenseRtf" Value="EULA.rtf" />
+
+  </Product>
+</Wix>

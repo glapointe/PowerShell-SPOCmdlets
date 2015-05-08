@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lapointe.SharePointOnline.PowerShell</RootNamespace>
+    <AssemblyName>Lapointe.SharePointOnline.PowerShell</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lapointe.PowerShell.MamlGenerator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=313d176eae804710, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Client.Policy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.Search.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceAssemblies\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.PowerShell.Commands.Utility" />
+    <Reference Include="System.Management.Automation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ValidateDirectoryExistsAndValidFileNameAttribute.cs" />
+    <Compile Include="Attributes\ValidateDirectoryExistsAttribute.cs" />
+    <Compile Include="Attributes\ValidateFileExistsAttribute.cs" />
+    <Compile Include="CmdletContext.cs" />
+    <Compile Include="Cmdlets\BaseSPOCmdlet.cs" />
+    <Compile Include="Cmdlets\ConnectSPOSite.cs" />
+    <Compile Include="Cmdlets\ContentTypes\RemoveSPOContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\AddSPOContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\GetSPOContentType.cs" />
+    <Compile Include="Cmdlets\ContentTypes\NewSPOContentType.cs" />
+    <Compile Include="Cmdlets\InvokeRestMethod.cs" />
+    <Compile Include="Cmdlets\DisconnectSPOSite.cs" />
+    <Compile Include="Cmdlets\EventReceivers\GetSPOEventReceiver.cs" />
+    <Compile Include="Cmdlets\Features\DisableSPOFeature.cs" />
+    <Compile Include="Cmdlets\Features\EnableSPOFeature.cs" />
+    <Compile Include="Cmdlets\Features\GetSPOFeature.cs" />
+    <Compile Include="Cmdlets\Fields\AddSPOField.cs" />
+    <Compile Include="Cmdlets\Fields\NewSPOField.cs" />
+    <Compile Include="Cmdlets\Lists\NewSPOListFolder.cs" />
+    <Compile Include="Cmdlets\Lists\GetSPOFolder.cs" />
+    <Compile Include="Cmdlets\Lists\GetSPOFile.cs" />
+    <Compile Include="Cmdlets\Lists\NewSPOFile.cs" />
+    <Compile Include="Cmdlets\Lists\GetSPOList.cs" />
+    <Compile Include="Cmdlets\Lists\NewSPOList.cs" />
+    <Compile Include="Cmdlets\Lists\NewSPOListItem.cs" />
+    <Compile Include="Cmdlets\Lists\RemoveSPOList.cs" />
+    <Compile Include="Cmdlets\Lists\SetSPOList.cs" />
+    <Compile Include="Cmdlets\Search\ExportSPOSearchConfiguration.cs" />
+    <Compile Include="Cmdlets\Search\ImportSPOSearchConfiguration.cs" />
+    <Compile Include="Cmdlets\Sites\SetSPOWebTheme.cs" />
+    <Compile Include="Cmdlets\Sites\SetSPOWeb.cs" />
+    <Compile Include="Cmdlets\Sites\RemoveSPOWeb.cs" />
+    <Compile Include="Cmdlets\Sites\GetSPOWeb.cs" />
+    <Compile Include="Cmdlets\Sites\GetSPOContextSite.cs" />
+    <Compile Include="Cmdlets\Sites\NewSPOWeb.cs" />
+    <Compile Include="Cmdlets\Solutions\AddSPOSolution.cs" />
+    <Compile Include="Cmdlets\Solutions\UninstallSPOSolution.cs" />
+    <Compile Include="Cmdlets\Solutions\InstallSPOSolution.cs" />
+    <Compile Include="Cmdlets\Taxonomy\GetSPOTermStore.cs" />
+    <Compile Include="Cmdlets\Taxonomy\NewSPOTermSet.cs" />
+    <Compile Include="Cmdlets\Taxonomy\GetSPOTerm.cs" />
+    <Compile Include="Cmdlets\Taxonomy\GetSPOTermSet.cs" />
+    <Compile Include="Cmdlets\Taxonomy\ExportSPOTaxonomy.cs" />
+    <Compile Include="Cmdlets\Taxonomy\ExportTermsHelper.cs" />
+    <Compile Include="Cmdlets\Taxonomy\GetSPOTermGroup.cs" />
+    <Compile Include="Cmdlets\Taxonomy\ImportTermsHelper.cs" />
+    <Compile Include="Cmdlets\Taxonomy\ImportSPOTaxonomy.cs" />
+    <Compile Include="Cmdlets\Taxonomy\NewSPOTermGroup.cs" />
+    <Compile Include="Cmdlets\WebParts\AddListViewWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\AddWebPart.cs" />
+    <Compile Include="Cmdlets\WebParts\GetWebPart.cs" />
+    <Compile Include="Cmdlets\WikiPages\SetSPOWikiPageLayout.cs" />
+    <Compile Include="Cmdlets\WikiPages\NewSPOWikiPage.cs" />
+    <Compile Include="Data\ContentTypes\SPOContentType.cs" />
+    <Compile Include="Data\EventReceivers\SPOEventReceiverDefinition.cs" />
+    <Compile Include="Data\Fields\SPOField.cs" />
+    <Compile Include="Data\Lists\SPOFile.cs" />
+    <Compile Include="Data\Lists\SPOFolder.cs" />
+    <Compile Include="Data\Lists\SPOInformationRightsManagementSettings.cs" />
+    <Compile Include="Data\Lists\SPOList.cs" />
+    <Compile Include="Data\Lists\SPOListItem.cs" />
+    <Compile Include="Data\Lists\SPOView.cs" />
+    <Compile Include="Data\Lists\SPOWikiPage.cs" />
+    <Compile Include="Data\Navigation\SPONavigation.cs" />
+    <Compile Include="Data\Navigation\SPONavigationNode.cs" />
+    <Compile Include="Data\Navigation\SPONavigationNodeCollection.cs" />
+    <Compile Include="Data\Principals\SPOGroup.cs" />
+    <Compile Include="Data\Principals\SPOPrincipal.cs" />
+    <Compile Include="Data\Sites\SPOPropertyBag.cs" />
+    <Compile Include="Data\Sites\SPOSite.cs" />
+    <Compile Include="Data\Principals\SPOUser.cs" />
+    <Compile Include="Data\Sites\SPOUserCustomAction.cs" />
+    <Compile Include="Data\Sites\SPOUserCustomActionCollection.cs" />
+    <Compile Include="Data\Sites\SPOWeb.cs" />
+    <Compile Include="Data\SPOClientObject.cs" />
+    <Compile Include="Data\SPOClientObjectCollection.cs" />
+    <Compile Include="Data\Taxonomy\SPOTaxonomyBase.cs" />
+    <Compile Include="Data\Taxonomy\SPOTermLabel.cs" />
+    <Compile Include="Data\Taxonomy\SPOTaxonomyItem.cs" />
+    <Compile Include="Data\Taxonomy\SPOTerm.cs" />
+    <Compile Include="Data\Taxonomy\SPOTermSet.cs" />
+    <Compile Include="Data\Taxonomy\SPOTermGroup.cs" />
+    <Compile Include="Data\Taxonomy\SPOTermSetItem.cs" />
+    <Compile Include="Data\Taxonomy\SPOTermStore.cs" />
+    <Compile Include="Data\WebParts\SPOWebPart.cs" />
+    <Compile Include="Data\WebParts\SPOWebPartDefinition.cs" />
+    <Compile Include="Enums\WikiPageLayout.cs" />
+    <Compile Include="Exceptions\FileExistsException.cs" />
+    <Compile Include="PipeBind\CmdletPipeBind.cs" />
+    <Compile Include="PipeBind\SPOFieldPipeBind.cs" />
+    <Compile Include="PipeBind\SPOContentTypePipeBind.cs" />
+    <Compile Include="PipeBind\PropertiesPipeBind.cs" />
+    <Compile Include="PipeBind\SPOFilePipeBind.cs" />
+    <Compile Include="PipeBind\SPOGroupPipeBind.cs" />
+    <Compile Include="PipeBind\CredentialPipeBind.cs" />
+    <Compile Include="PipeBind\SPOListPipeBind.cs" />
+    <Compile Include="PipeBind\SPOUserPipeBind.cs" />
+    <Compile Include="PipeBind\SPOWebPipeBind.cs" />
+    <Compile Include="PipeBind\SPOTermGroupPipeBind.cs" />
+    <Compile Include="PipeBind\SPOTermPipeBind.cs" />
+    <Compile Include="PipeBind\SPOTermSetPipeBind.cs" />
+    <Compile Include="PipeBind\SPOTermStorePipeBind.cs" />
+    <Compile Include="PipeBind\UrlPipeBind.cs" />
+    <Compile Include="PipeBind\XmlDocumentPipeBind.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPOSiteContext.cs" />
+    <Compile Include="SPOSiteHelper.cs" />
+    <Compile Include="Validators\ValidateDirectoryExistsAndValidFileNameAttribute.cs" />
+    <Compile Include="Validators\ValidateDirectoryExistsAttribute.cs" />
+    <Compile Include="Validators\ValidateFileExistsAttribute.cs" />
+    <Compile Include="Utilities\StreamHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="EULA.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="GenerateHelp.ps1" />
+    <None Include="Lapointe.SharePointOnline.PowerShell.ps1xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Lapointe.SharePointOnline.PowerShell.psd1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="install.wxs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lapointe.SharePointOnline.PowerShell.dll-help.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>C:\Windows\SysNative\WindowsPowerShell\v1.0\powershell.exe "&amp; {$(ProjectDir)GenerateHelp.ps1 '$(TargetDir)' '$(ConfigurationName)'}"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

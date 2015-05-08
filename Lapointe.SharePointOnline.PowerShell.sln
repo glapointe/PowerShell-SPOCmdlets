@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lapointe.SharePointOnline.PowerShell", "Lapointe.SharePointOnline.PowerShell.csproj", "{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugFoundation|Any CPU = DebugFoundation|Any CPU
+		DebugMOSS|Any CPU = DebugMOSS|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseFoundation|Any CPU = ReleaseFoundation|Any CPU
+		ReleaseMOSS|Any CPU = ReleaseMOSS|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.DebugFoundation|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.DebugFoundation|Any CPU.Build.0 = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.DebugMOSS|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.DebugMOSS|Any CPU.Build.0 = Debug|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.ReleaseFoundation|Any CPU.ActiveCfg = Release|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.ReleaseFoundation|Any CPU.Build.0 = Release|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.ReleaseMOSS|Any CPU.ActiveCfg = Release|Any CPU
+		{5F11E4D5-CDDB-47E9-AB82-69C26C2EEE33}.ReleaseMOSS|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
