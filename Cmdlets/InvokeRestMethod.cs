@@ -123,7 +123,11 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets
                         }
                         return;
                     }
-                    WriteObject(streamReader.ReadToEnd());
+                    using (var memStream = new MemoryStream())
+                    {
+                        streamReader.BaseStream.CopyTo(memStream);
+                        WriteObject(memStream.ToArray());
+                    }
                     return;
                 }
 
