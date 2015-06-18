@@ -160,7 +160,11 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets
 
         private void AddBody(WebRequest request, object body)
         {
-            if (body == null) return;
+            if (body == null)
+            {
+                request.ContentLength = 0L;
+                return;
+            }
 
             if (body is PSObject)
             {
@@ -205,6 +209,8 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets
                 {
                     SetRequestContent(request, htmlWebResponse.Forms[0].Fields);
                 }
+                else
+                    request.ContentLength = 0L;
             }
         }
         internal long SetRequestContent(WebRequest request, byte[] content)
