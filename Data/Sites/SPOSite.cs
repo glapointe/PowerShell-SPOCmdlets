@@ -171,15 +171,15 @@ namespace Lapointe.SharePointOnline.PowerShell.Data.Sites
                 return false;
             }
         }
-        public RecycleBinItemCollection RecycleBin
-        {
-            get
-            {
-                if (_site.IsObjectPropertyInstantiated("RecycleBin"))
-                    return _site.RecycleBin;
-                return null;
-            }
-        }
+        //public RecycleBinItemCollection RecycleBin
+        //{
+        //    get
+        //    {
+        //        if (_site.IsObjectPropertyInstantiated("RecycleBin"))
+        //            return _site.RecycleBin;
+        //        return null;
+        //    }
+        //}
         public string ServerRelativeUrl
         {
             get
@@ -390,10 +390,11 @@ namespace Lapointe.SharePointOnline.PowerShell.Data.Sites
             ctx.Load(site);
             if (detailed)
             {
+                // Some new bug is preventing the RecycleBin property from being populated.
                 ctx.Load(site,
                     s => s.CanUpgrade,
                     s => s.Owner,
-                    s => s.RecycleBin,
+                    //s => s.RecycleBin,
                     s => s.UpgradeInfo,
                     s => s.Usage,
                     s => s.UserCustomActions);
