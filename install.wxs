@@ -3,7 +3,7 @@
   <Product Id="e0962691-21b0-4a83-a720-7e90dd43c0f8" 
            UpgradeCode="e0962691-21b0-4a83-a720-001000000000"
            Name="SharePoint Online PowerShell Cmdlets by Gary Lapointe"
-           Version="1.2.2" 
+           Version="1.2.6" 
            Manufacturer="Falchion Consulting, LLC" 
            Language="1033" 
            Codepage="1252">

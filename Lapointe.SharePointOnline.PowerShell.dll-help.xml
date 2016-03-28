@@ -15,7 +15,7 @@
       </maml:copyright>
       <command:verb>Connect</command:verb>
       <command:noun>SPOSite</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Connect-SPOSite cmdlet connects a SharePoint Online user to the specified SharePoint Online Site Collection.</maml:para>
@@ -161,7 +161,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a new content type to an existing List.</maml:para>
@@ -299,7 +299,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a new content type to an existing List.</maml:para>
@@ -437,7 +437,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves the Content Types for the Site or List.</maml:para>
@@ -595,7 +595,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new content type within an existing Site or List.</maml:para>
@@ -785,7 +785,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Invoke</command:verb>
       <command:noun>SPORestMethod</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>This function sends an HTTP or HTTPS request to a Representational State Transfer (REST)-compliant ("RESTful") SharePoint Online web service. The Connect-SPOSite cmdlet must be run first in order to set the credentials for the environment.</maml:para>
@@ -1016,7 +1016,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Disconnect</command:verb>
       <command:noun>SPOSite</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Disconnect-SPOSite cmdlet explicitly disconnects a previously created SharePoint Online site connection.</maml:para>
@@ -1094,7 +1094,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOEventReceiver</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then the Site Collection scoped Event Receivers are returned; otherwise, the Site scoped Event Receivers for a given Site are returned.</maml:para>
@@ -1203,7 +1203,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Disable</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then a Site Collection scoped Feature will be disabled; otherwise, a Site scoped Feature for a given Site will be disabled.</maml:para>
@@ -1350,7 +1350,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Enable</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then a Site Collection scoped Feature will be enabled; otherwise, a Site scoped Feature for a given Site will be enabled.</maml:para>
@@ -1497,7 +1497,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then the Site Collection scoped Feature definition IDs are returned; otherwise, the Site scoped Feature definition IDs for a given Site are returned.</maml:para>
@@ -1622,7 +1622,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOField</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds an existing Field to a List.</maml:para>
@@ -1752,7 +1752,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOField</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new Field within an existing Site or List.</maml:para>
@@ -1965,7 +1965,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOListFolder</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a folder in the specified list. The Site provided by the -Web parameter must correspond to the Site where the folder and List is located or else an argument out of range exception will be thrown.</maml:para>
@@ -2103,7 +2103,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFolder</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieve a specific SPOFolder object from a Site given the server relative URL to the folder. The Site provided by the -Web parameter must correspond to the Site where the folder is located or else an argument out of range exception will be thrown.</maml:para>
@@ -2221,7 +2221,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFile</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieve a specific SPOFile object from a Site given the server relative URL to the file. The Site provided by the -Web parameter must correspond to the Site where the file is located or else an argument out of range exception will be thrown.</maml:para>
@@ -2339,7 +2339,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOFile</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list file within an existing List.</maml:para>
@@ -2532,7 +2532,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -List parameter is not provided then all the lists the given Site are returned; otherwise, a single list will be returned matching the identifier provided.</maml:para>
@@ -2677,7 +2677,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list within an existing Site.</maml:para>
@@ -2943,7 +2943,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOListItem</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list item within an existing List.</maml:para>
@@ -3103,7 +3103,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Removes a List from the specified Site.</maml:para>
@@ -3245,7 +3245,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Set-SPOList cmdlet configures the list specified by the Identity parameter. Settings for any parameters that are not provided are not changed.</maml:para>
@@ -4290,7 +4290,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Export</command:verb>
       <command:noun>SPOSearchConfiguration</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Exports the search configuration from the current Tenant or Site Collection.</maml:para>
@@ -4410,7 +4410,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Import</command:verb>
       <command:noun>SPOSearchConfiguration</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a single Site given the server relative URL, GUID, or existing SPOWeb object. If a Site identifier is not provided then all Sites are provided.</maml:para>
@@ -4526,7 +4526,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWebTheme</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Applies a theme with the specified components to the specified Site.</maml:para>
@@ -4702,7 +4702,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Set-SPOWeb cmdlet configures the subsite specified by the Identity parameter. Settings for any parameters that are not provided are not changed.</maml:para>
@@ -5341,7 +5341,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Removes a Site from the current Site Collection.</maml:para>
@@ -5463,7 +5463,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a single Site given the server relative URL, GUID, or existing SPOWeb object. If a Site identifier is not provided then all Sites are provided.</maml:para>
@@ -5613,7 +5613,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOContextSite</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves the details for the currently connected Site Collection.</maml:para>
@@ -5718,7 +5718,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new child Site within an existing Site.</maml:para>
@@ -5932,7 +5932,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOSolution</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
@@ -6048,7 +6048,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Install</command:verb>
       <command:noun>SPOSolution</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
@@ -6182,7 +6182,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermStore</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Store object.</maml:para>
@@ -6280,7 +6280,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOTermSet</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a Term Set object.</maml:para>
@@ -6540,7 +6540,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTerm</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term or Terms matching the specified criteria.</maml:para>
@@ -6728,7 +6728,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermSet</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Set object.</maml:para>
@@ -6826,7 +6826,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Export</command:verb>
       <command:noun>SPOTaxonomy</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Export the Managed Metadata Terms.</maml:para>
@@ -7070,7 +7070,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermGroup</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Group object.</maml:para>
@@ -7168,7 +7168,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Import</command:verb>
       <command:noun>SPOTaxonomy</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Import the Managed Metadata Terms.</maml:para>
@@ -7412,7 +7412,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOTermGroup</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a Term Group object.</maml:para>
@@ -7564,7 +7564,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOListViewWebPart</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
@@ -7890,7 +7890,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOWebPart</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
@@ -8158,7 +8158,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOWebPart</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Gets a web part or list of web parts from a web part page or wiki page.</maml:para>
@@ -8299,7 +8299,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWikiPageLayout</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Sets the layout for a wiki page within an existing List.</maml:para>
@@ -8478,7 +8478,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOWikiPage</command:noun>
-      <dev:version>1.2.5.0</dev:version>
+      <dev:version>1.2.6.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new wiki page within an existing List.</maml:para>
