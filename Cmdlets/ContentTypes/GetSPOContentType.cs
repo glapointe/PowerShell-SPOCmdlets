@@ -21,7 +21,7 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets.ContentTypes
         Remarks = "Retrieves all the Content Types for the root Site of the current Site Collection.")]
     [Example(Code = "PS C:\\> Get-SPOContentType -Web \"/\" -Identity \"Document\"",
         Remarks = "Retrieves the Document Content Types from the root Site of the current Site Collection.")]
-    public class GetSPOEventReceiver : BaseSPOCmdlet
+    public class GetSPOContentType : BaseSPOCmdlet
     {
         [ValidateNotNullOrEmpty,
         Parameter(
