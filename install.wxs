@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="e0962691-21b0-4a83-a720-7e90dd43c0f8" 
+  <!-- For upgrades increment the Id attribute and the Version attribute -->
+  <Product Id="e0962691-21b0-4a83-a720-001003000000" 
            UpgradeCode="e0962691-21b0-4a83-a720-001000000000"
            Name="SharePoint Online PowerShell Cmdlets by Gary Lapointe"
-           Version="1.2.6" 
+           Version="1.3.0" 
            Manufacturer="Falchion Consulting, LLC" 
            Language="1033" 
            Codepage="1252">
@@ -11,15 +12,13 @@
     <Package Id="*" 
              InstallerVersion="200" 
              Compressed="yes" 
-             Comments="Copyright 2014 Falchion Consulting, LLC"
+             Comments="Copyright 2016 Falchion Consulting, LLC"
              Description="A Microsoft SharePoint Online Services Module for Windows PowerShell developed by Gary Lapointe."
              Keywords="SharePoint, PowerShell"/>
 
+    <MajorUpgrade AllowDowngrades="no" DowngradeErrorMessage="You are attempting install an earlier version. You must uninstall the current version first." AllowSameVersionUpgrades="no" />
+    
     <Media Id="1" Cabinet="Lapointe.SharePointOnline.PowerShell.cab" EmbedCab="yes"/>
-
-    <!--<Upgrade Id="04410879-C05F-4B59-8950-44968F42856B">
-      <UpgradeVersion OnlyDetect="no" Property="PREVIOUSFOUND" Minimum="1.0.0" Maximum="1.1.0" IncludeMinimum="yes" IncludeMaximum="no" />
-    </Upgrade>-->
 
     <!--<InstallExecuteSequence>
       <RemoveExistingProducts Before="InstallInitialize" />

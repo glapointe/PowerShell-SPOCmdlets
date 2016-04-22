@@ -164,6 +164,27 @@ namespace Lapointe.SharePointOnline.PowerShell.Data.Lists
             return null;
         }
 
+        private List<SPOFile> _files = null;
+        public List<SPOFile> GetFiles()
+        {
+            if (!_folder.IsObjectPropertyInstantiated("Files"))
+            {
+                _folder.Context.Load(_folder.Files);
+                _folder.Context.ExecuteQuery();
+            }
+            if (_files == null)
+            {
+                _files = new List<SPOFile>();
+                foreach (File f in _folder.Files)
+                {
+                    SPOFile.LoadFile(SPOSiteContext.CurrentSiteContext.Context, f);
+                    _files.Add(new SPOFile(f));
+                }
+                return _files;
+            }
+            return null;
+        }
+
         public SPOFile AddTemplateFile(string leafName, TemplateFileType templateType)
         {
             return AddTemplateFile(leafName, templateType, false);

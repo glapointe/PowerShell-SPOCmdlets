@@ -124,6 +124,7 @@
     <Compile Include="Cmdlets\Features\GetSPOFeature.cs" />
     <Compile Include="Cmdlets\Fields\AddSPOField.cs" />
     <Compile Include="Cmdlets\Fields\NewSPOField.cs" />
+    <Compile Include="Cmdlets\Lists\DownloadSPOFile.cs" />
     <Compile Include="Cmdlets\Lists\NewSPOListFolder.cs" />
     <Compile Include="Cmdlets\Lists\GetSPOFolder.cs" />
     <Compile Include="Cmdlets\Lists\GetSPOFile.cs" />
@@ -198,6 +199,7 @@
     <Compile Include="PipeBind\SPOFieldPipeBind.cs" />
     <Compile Include="PipeBind\SPOContentTypePipeBind.cs" />
     <Compile Include="PipeBind\PropertiesPipeBind.cs" />
+    <Compile Include="PipeBind\SPOFolderPipeBind.cs" />
     <Compile Include="PipeBind\SPOFilePipeBind.cs" />
     <Compile Include="PipeBind\SPOGroupPipeBind.cs" />
     <Compile Include="PipeBind\CredentialPipeBind.cs" />

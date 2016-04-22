@@ -11,7 +11,7 @@
 ModuleToProcess = 'Lapointe.SharePointOnline.PowerShell.dll'
 
 # Version number of this module.
-ModuleVersion = '1.0.0.0'
+ModuleVersion = '1.3.0.0'
 
 # ID used to uniquely identify this module
 GUID = 'e0962691-21b0-4a83-a720-7e90dd43c0f8'

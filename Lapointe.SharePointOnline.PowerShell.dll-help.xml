@@ -7,7 +7,7 @@
         <maml:para>Connects a SharePoint Online user to a SharePoint Online Site Collection. This cmdlet must be run before any other Site Collection scoped SharePoint Online cmdlets can run.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -15,14 +15,14 @@
       </maml:copyright>
       <command:verb>Connect</command:verb>
       <command:noun>SPOSite</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Connect-SPOSite cmdlet connects a SharePoint Online user to the specified SharePoint Online Site Collection.</maml:para>
       <maml:para />
       <maml:para>Only a single SharePoint Online site connection is maintained from any single Windows PowerShell session. In other words, this is a per-site collection user connection. Running the Connect-SPOSite cmdlet twice implicitly disconnects the previous connection. The Windows PowerShell session will be set to serve the new SharePoint Online user and site collection specified. If you are connecting to an on-premises version of SharePoint and not SharePoint Online then use the -NetworkCredentials switch parameter to treat the provided credentials as network credentials.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -122,19 +122,19 @@
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
+        <dev:code>PS C:\&gt; Connect-SPOSite -Url "https://contoso.sharepoint.com/" -Credential "admin@contoso.com"</dev:code>
+        <dev:remarks>
+          <maml:para>This example connects to the Site Collection at https://contoso.sharepoint.com/.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
         <dev:code>PS C:\&gt; $username = "admin@contoso.sharepoint.com"
 PS C:\&gt; $password = "password"
 PS C:\&gt; $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(ConvertTo-SecureString $password -AsPlainText -Force)
 PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cred</dev:code>
         <dev:remarks>
           <maml:para>This example connects to the Site Collection at https://contoso.sharepoint.com/ given a specific username and password.</maml:para>
-        </dev:remarks>
-      </command:example>
-      <command:example>
-        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Connect-SPOSite -Url "https://contoso.sharepoint.com/" -Credential "admin@contoso.com"</dev:code>
-        <dev:remarks>
-          <maml:para>This example connects to the Site Collection at https://contoso.sharepoint.com/.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -153,7 +153,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
         <maml:para>Adds a new content type to an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -161,12 +161,12 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a new content type to an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -291,7 +291,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
         <maml:para>Adds a new content type to an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -299,12 +299,12 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a new content type to an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -429,7 +429,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
         <maml:para>Retrieves the Content Types for the Site or List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -437,12 +437,12 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves the Content Types for the Site or List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -587,7 +587,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
         <maml:para>Creates a new content type within an existing Site or List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -595,12 +595,12 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOContentType</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new content type within an existing Site or List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -777,7 +777,7 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
         <maml:para>Sends an HTTP or HTTPS request to a SharePoint Online REST-compliant web service.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -785,14 +785,14 @@ PS C:\&gt; Connect-SPOSite -Url "http://contoso.sharepoint.com/" -Credential $cr
       </maml:copyright>
       <command:verb>Invoke</command:verb>
       <command:noun>SPORestMethod</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>This function sends an HTTP or HTTPS request to a Representational State Transfer (REST)-compliant ("RESTful") SharePoint Online web service. The Connect-SPOSite cmdlet must be run first in order to set the credentials for the environment.</maml:para>
       <maml:para />
       <maml:para>Some source code for this cmdlet was referenced from http://blog.vgrem.com/2014/02/27/working-with-the-sharepoint-online-rest-service-via-powershell/.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1008,7 +1008,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Disconnects from a SharePoint Online site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1016,7 +1016,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Disconnect</command:verb>
       <command:noun>SPOSite</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Disconnect-SPOSite cmdlet explicitly disconnects a previously created SharePoint Online site connection.</maml:para>
@@ -1025,7 +1025,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       <maml:para />
       <maml:para>Even after a connection is terminated, operations that were started before the connection is terminated will run to completion. In other words, long-running operations will not be terminated by running the Disconnect-SPOSite cmdlet or the Connect-SPOSite cmdlet.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1086,7 +1086,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves the Event Receivers for the Site Collection or a specific Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1094,12 +1094,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOEventReceiver</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then the Site Collection scoped Event Receivers are returned; otherwise, the Site scoped Event Receivers for a given Site are returned.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1167,16 +1167,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-SPOEventReceiver</dev:code>
+        <dev:code>PS C:\&gt; Get-SPOEventReceiver -Web "/"</dev:code>
         <dev:remarks>
-          <maml:para>Retrieves all Site Collection scoped Event Receivers.</maml:para>
+          <maml:para>Retrieves all Site scoped Event Receivers for the root Site.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-SPOEventReceiver -Web "/"</dev:code>
+        <dev:code>PS C:\&gt; Get-SPOEventReceiver</dev:code>
         <dev:remarks>
-          <maml:para>Retrieves all Site scoped Event Receivers for the root Site.</maml:para>
+          <maml:para>Retrieves all Site Collection scoped Event Receivers.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1195,7 +1195,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Disables a Feature within the current Site Collection or a specific Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1203,12 +1203,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Disable</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then a Site Collection scoped Feature will be disabled; otherwise, a Site scoped Feature for a given Site will be disabled.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1310,16 +1310,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Disable-SPOFeature -Identity "{7AF6EA6F-2079-4310-B964-210A87F0D5A1}"</dev:code>
+        <dev:code>PS C:\&gt; Disable-SPOFeature -Web "/" -Identity "{7AF6EA6F-2079-4310-B964-210A87F0D5A1}"</dev:code>
         <dev:remarks>
-          <maml:para>Disables a Site Collection scoped Feature.</maml:para>
+          <maml:para>Disables a Site scoped Feature on the root Site.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Disable-SPOFeature -Web "/" -Identity "{7AF6EA6F-2079-4310-B964-210A87F0D5A1}"</dev:code>
+        <dev:code>PS C:\&gt; Disable-SPOFeature -Identity "{7AF6EA6F-2079-4310-B964-210A87F0D5A1}"</dev:code>
         <dev:remarks>
-          <maml:para>Disables a Site scoped Feature on the root Site.</maml:para>
+          <maml:para>Disables a Site Collection scoped Feature.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1342,7 +1342,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Enables a Feature within the current Site Collection or a specific Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1350,12 +1350,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Enable</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then a Site Collection scoped Feature will be enabled; otherwise, a Site scoped Feature for a given Site will be enabled.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1489,7 +1489,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves the Feature definition IDs for the Site Collection or a specific Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1497,12 +1497,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFeature</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -Web parameter is not provided then the Site Collection scoped Feature definition IDs are returned; otherwise, the Site scoped Feature definition IDs for a given Site are returned.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1614,7 +1614,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Adds an existing Field to a List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1622,12 +1622,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOField</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds an existing Field to a List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1744,7 +1744,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new Field within an existing Site or List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1752,12 +1752,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOField</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new Field within an existing Site or List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1951,13 +1951,202 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/1" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:gl="http://schemas.falchionconsulting.com/maml/gl/2013/02" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10">
     <command:details>
+      <command:name>Download-SPOFile</command:name>
+      <gl:group>Lists</gl:group>
+      <maml:description>
+        <maml:para>Downloads a specific File from a given Site.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
+        <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
+        <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
+        <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
+        <maml:para>  &gt; Gary Lapointe assumes no liability.</maml:para>
+      </maml:copyright>
+      <command:verb>Download</command:verb>
+      <command:noun>SPOFile</command:noun>
+      <dev:version>1.3.0.0</dev:version>
+    </command:details>
+    <maml:description>
+      <maml:para>Download and save a specific file from a Site given the server relative URL to the file. The Site provided by the -Web parameter must correspond to the Site where the file is located or else an argument out of range exception will be thrown.</maml:para>
+      <maml:para />
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
+      <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
+      <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
+      <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
+      <maml:para>  &gt; Gary Lapointe assumes no liability.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Download-SPOFile</maml:name>
+        <command:parameter required="true" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Download-SPOFile</maml:name>
+        <command:parameter required="true" position="2">
+          <maml:name>Folder</maml:name>
+          <command:parameterValue required="true">SPOFolderPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="3">
+          <maml:name>Recursive</maml:name>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue)" position="1" variableLength="false">
+        <maml:name>Web</maml:name>
+        <maml:description>
+          <maml:para>Specifies the identity of the Site containing the File(s) to retrieve.</maml:para>
+          <maml:para />
+          <maml:para>The type must be a valid server relative URL, in the form /site_name, or an SPOWeb object, Microsoft.SharePoint.Client.Web object, or GUID representing the Site ID.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SPOWebPipeBind</command:parameterValue>
+        <dev:type>
+          <maml:name>SPOWebPipeBind</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="2" variableLength="true">
+        <maml:name>File</maml:name>
+        <maml:description>
+          <maml:para>The server relative URL(s) to the file(s) to retrieve.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">SPOFilePipeBind[]</command:parameterValue>
+        <dev:type>
+          <maml:name>SPOFilePipeBind[]</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="true (ByValue, ByPropertyName)" position="2" variableLength="false">
+        <maml:name>Folder</maml:name>
+        <maml:description>
+          <maml:para>The path to the folder to save.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SPOFolderPipeBind</command:parameterValue>
+        <dev:type>
+          <maml:name>SPOFolderPipeBind</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="3" variableLength="false">
+        <maml:name>Recursive</maml:name>
+        <maml:description>
+          <maml:para>Save all child folders and their files.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="true" globbing="false" pipelineInput="false" position="4" variableLength="false">
+        <maml:name>TargetFolder</maml:name>
+        <maml:description>
+          <maml:para>The path to the folder to save the files to.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+      <command:parameter required="false" globbing="false" pipelineInput="false" position="5" variableLength="false">
+        <maml:name>Overwrite</maml:name>
+        <maml:description>
+          <maml:para>Overwrite existing files.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name />
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name />
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <maml:alertSet>
+      <maml:title />
+      <maml:alert>
+        <maml:para>For more information, type "Get-Help Download-SPOFile -detailed". For technical information, type "Get-Help Download-SPOFile -full".</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------------------EXAMPLE------------------</maml:title>
+        <dev:code>PS C:\&gt; Download-SPOFile -Web "/" -File "/Shared Documents/MyFile.docx" -TargetFolder "c:\temp" -Overwrite</dev:code>
+        <dev:remarks>
+          <maml:para>Downloads the file MyFile.docx from the Documents library within the root Site of the current Site Collection and saves to the c:\temp folder.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Connect-SPOSite</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/1" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:gl="http://schemas.falchionconsulting.com/maml/gl/2013/02" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10">
+    <command:details>
       <command:name>New-SPOListFolder</command:name>
       <gl:group>Lists</gl:group>
       <maml:description>
         <maml:para>Creates a Folder in a list or library.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -1965,12 +2154,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOListFolder</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a folder in the specified list. The Site provided by the -Web parameter must correspond to the Site where the folder and List is located or else an argument out of range exception will be thrown.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2095,7 +2284,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a specific Folder from a given Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2103,12 +2292,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFolder</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieve a specific SPOFolder object from a Site given the server relative URL to the folder. The Site provided by the -Web parameter must correspond to the Site where the folder is located or else an argument out of range exception will be thrown.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2213,7 +2402,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a specific File from a given Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2221,12 +2410,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOFile</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieve a specific SPOFile object from a Site given the server relative URL to the file. The Site provided by the -Web parameter must correspond to the Site where the file is located or else an argument out of range exception will be thrown.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2331,7 +2520,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new list file within an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2339,12 +2528,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOFile</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list file within an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2524,7 +2713,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves the collection of lists or a specific list.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2532,12 +2721,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>If the -List parameter is not provided then all the lists the given Site are returned; otherwise, a single list will be returned matching the identifier provided.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2641,16 +2830,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-SPOList -Web "/" -Identity "Shared Documents"</dev:code>
+        <dev:code>PS C:\&gt; Get-SPOList -Web "/"</dev:code>
         <dev:remarks>
-          <maml:para>Retrieves a single list for the given Site.</maml:para>
+          <maml:para>Retrieves all lists for the root Site.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-SPOList -Web "/"</dev:code>
+        <dev:code>PS C:\&gt; Get-SPOList -Web "/" -Identity "Shared Documents"</dev:code>
         <dev:remarks>
-          <maml:para>Retrieves all lists for the root Site.</maml:para>
+          <maml:para>Retrieves a single list for the given Site.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -2669,7 +2858,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new list within an existing Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2677,12 +2866,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list within an existing Site.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2935,7 +3124,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new list item within an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -2943,12 +3132,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOListItem</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new list item within an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -3095,7 +3284,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Removes a List from the specified Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -3103,12 +3292,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Removes a List from the specified Site.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -3237,7 +3426,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Configures the specified list.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -3245,12 +3434,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOList</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Set-SPOList cmdlet configures the list specified by the Identity parameter. Settings for any parameters that are not provided are not changed.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4246,16 +4435,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/" -CustomMasterUrl "/_catalogs/masterpage/seattle.master"</dev:code>
+        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/childsite" -BreakRoleInheritance -CopyRoleAssignments</dev:code>
         <dev:remarks>
-          <maml:para>This example sets the master page of the root Site of a Site Collection to seattle.master.</maml:para>
+          <maml:para>This example breaks permissions inheritance for /childsite and copies the parents permissions to the Site.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/childsite" -BreakRoleInheritance -CopyRoleAssignments</dev:code>
+        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/" -CustomMasterUrl "/_catalogs/masterpage/seattle.master"</dev:code>
         <dev:remarks>
-          <maml:para>This example breaks permissions inheritance for /childsite and copies the parents permissions to the Site.</maml:para>
+          <maml:para>This example sets the master page of the root Site of a Site Collection to seattle.master.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -4282,7 +4471,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Exports the search configuration.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4290,12 +4479,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Export</command:verb>
       <command:noun>SPOSearchConfiguration</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Exports the search configuration from the current Tenant or Site Collection.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4402,7 +4591,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves one or more Sites within the current Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4410,12 +4599,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Import</command:verb>
       <command:noun>SPOSearchConfiguration</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a single Site given the server relative URL, GUID, or existing SPOWeb object. If a Site identifier is not provided then all Sites are provided.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4518,7 +4707,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Applies a theme with the specified components to the specified Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4526,12 +4715,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWebTheme</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Applies a theme with the specified components to the specified Site.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4694,7 +4883,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Configures the specified subsite.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -4702,12 +4891,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>The Set-SPOWeb cmdlet configures the subsite specified by the Identity parameter. Settings for any parameters that are not provided are not changed.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5297,16 +5486,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/" -CustomMasterUrl "/_catalogs/masterpage/seattle.master"</dev:code>
+        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/childsite" -BreakRoleInheritance -CopyRoleAssignments</dev:code>
         <dev:remarks>
-          <maml:para>This example sets the master page of the root Site of a Site Collection to seattle.master.</maml:para>
+          <maml:para>This example breaks permissions inheritance for /childsite and copies the parents permissions to the Site.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/childsite" -BreakRoleInheritance -CopyRoleAssignments</dev:code>
+        <dev:code>PS C:\&gt; Set-SPOWeb -Identity "/" -CustomMasterUrl "/_catalogs/masterpage/seattle.master"</dev:code>
         <dev:remarks>
-          <maml:para>This example breaks permissions inheritance for /childsite and copies the parents permissions to the Site.</maml:para>
+          <maml:para>This example sets the master page of the root Site of a Site Collection to seattle.master.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -5333,7 +5522,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Removes a Site from the current Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5341,12 +5530,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Remove</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Removes a Site from the current Site Collection.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5455,7 +5644,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves one or more Sites within the current Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5463,12 +5652,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a single Site given the server relative URL, GUID, or existing SPOWeb object. If a Site identifier is not provided then all Sites are provided.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5570,23 +5759,23 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-SPOWeb "/" -Detail</dev:code>
-        <dev:remarks>
-          <maml:para>This example retrieves the core details along with additional information for the root site of the current Site Collection.</maml:para>
-        </dev:remarks>
-      </command:example>
-      <command:example>
-        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
         <dev:code>PS C:\&gt; Get-SPOWeb -Detail</dev:code>
         <dev:remarks>
           <maml:para>This example retrieves the core details along with additional information for all Sites within the current Site Collection.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
-        <maml:title>------------------EXAMPLE 3-----------------------</maml:title>
+        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
         <dev:code>PS C:\&gt; Get-SPOWeb "/childsite"</dev:code>
         <dev:remarks>
           <maml:para>This example retrieves the core details for the childsite sub-site of the current Site Collection.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------------------EXAMPLE 3-----------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-SPOWeb "/" -Detail</dev:code>
+        <dev:remarks>
+          <maml:para>This example retrieves the core details along with additional information for the root site of the current Site Collection.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -5605,7 +5794,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves the details for the currently connected Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5613,12 +5802,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOContextSite</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves the details for the currently connected Site Collection.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5710,7 +5899,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new child Site within an existing Site.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5718,12 +5907,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOWeb</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new child Site within an existing Site.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5924,7 +6113,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -5932,12 +6121,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOSolution</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6040,7 +6229,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6048,12 +6237,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Install</command:verb>
       <command:noun>SPOSolution</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Add a WSP to the Solution Gallery of a Site Collection.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6174,7 +6363,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a Term Store object.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6182,12 +6371,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermStore</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Store object.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6272,7 +6461,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a Term Set object.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6280,12 +6469,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOTermSet</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a Term Set object.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6532,7 +6721,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a Term or Terms matching the specified criteria.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6540,12 +6729,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTerm</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term or Terms matching the specified criteria.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6720,7 +6909,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a Term Set object.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6728,12 +6917,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermSet</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Set object.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6818,7 +7007,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Export the Managed Metadata Terms.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -6826,12 +7015,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Export</command:verb>
       <command:noun>SPOTaxonomy</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Export the Managed Metadata Terms.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7013,9 +7202,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Export-SPOTaxonomy -Term ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -OutputFile C:\terms.xml -Verbose</dev:code>
+        <dev:code>PS C:\&gt; Export-SPOTaxonomy -TermStore 0 -OutputFile C:\terms.xml -Verbose</dev:code>
         <dev:remarks>
-          <maml:para>This example exports a single term and saves to c:\terms.xml.</maml:para>
+          <maml:para>This example exports the term store at index position zero c:\terms.xml.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
@@ -7034,16 +7223,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 4-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Export-SPOTaxonomy -TermStore 0 -OutputFile C:\terms.xml -Verbose</dev:code>
+        <dev:code>PS C:\&gt; Export-SPOTaxonomy -Tenant -OutputFile "c:\terms.xml" -Verbose</dev:code>
         <dev:remarks>
-          <maml:para>This example exports the term store at index position zero c:\terms.xml.</maml:para>
+          <maml:para>This example exports the terms for all term stores associated with the tenant and saves to c:\terms.xml.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 5-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Export-SPOTaxonomy -Tenant -OutputFile "c:\terms.xml" -Verbose</dev:code>
+        <dev:code>PS C:\&gt; Export-SPOTaxonomy -Term ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -OutputFile C:\terms.xml -Verbose</dev:code>
         <dev:remarks>
-          <maml:para>This example exports the terms for all term stores associated with the tenant and saves to c:\terms.xml.</maml:para>
+          <maml:para>This example exports a single term and saves to c:\terms.xml.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -7062,7 +7251,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Retrieves a Term Group object.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7070,12 +7259,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOTermGroup</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Retrieves a Term Group object.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7160,7 +7349,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Import the Managed Metadata Terms.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7168,12 +7357,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Import</command:verb>
       <command:noun>SPOTaxonomy</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Import the Managed Metadata Terms.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7355,37 +7544,37 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentGroup "My Group" -InputFile C:\terms.xml -Verbose</dev:code>
-        <dev:remarks>
-          <maml:para>This example imports the terms from c:\terms.xml to the Group named My Group.</maml:para>
-        </dev:remarks>
-      </command:example>
-      <command:example>
-        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTerm ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -InputFile C:\terms.xml -Verbose</dev:code>
-        <dev:remarks>
-          <maml:para>This example imports the terms from c:\terms.xml to the Term with ID "6067b6a8-9866-40db-962d-84097f22619a".</maml:para>
-        </dev:remarks>
-      </command:example>
-      <command:example>
-        <maml:title>------------------EXAMPLE 3-----------------------</maml:title>
         <dev:code>PS C:\&gt; Import-SPOTaxonomy -Tenant -InputFile "c:\terms.xml"</dev:code>
         <dev:remarks>
           <maml:para>This example imports the terms from c:\terms.xml to the Term Store associated with the tenant.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
-        <maml:title>------------------EXAMPLE 4-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTermStore 0 -InputFile C:\terms.xml -Verbose</dev:code>
+        <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
+        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTermSet ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -InputFile C:\terms.xml -Verbose</dev:code>
         <dev:remarks>
-          <maml:para>This example imports the terms from c:\terms.xml to the Term Store at index position 0.</maml:para>
+          <maml:para>This example imports the terms from c:\terms.xml to the Term Set with ID "6067b6a8-9866-40db-962d-84097f22619a".</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------------------EXAMPLE 3-----------------------</maml:title>
+        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTerm ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -InputFile C:\terms.xml -Verbose</dev:code>
+        <dev:remarks>
+          <maml:para>This example imports the terms from c:\terms.xml to the Term with ID "6067b6a8-9866-40db-962d-84097f22619a".</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>------------------EXAMPLE 4-----------------------</maml:title>
+        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentGroup "My Group" -InputFile C:\terms.xml -Verbose</dev:code>
+        <dev:remarks>
+          <maml:para>This example imports the terms from c:\terms.xml to the Group named My Group.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 5-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTermSet ([guid]"6067b6a8-9866-40db-962d-84097f22619a") -InputFile C:\terms.xml -Verbose</dev:code>
+        <dev:code>PS C:\&gt; Import-SPOTaxonomy -ParentTermStore 0 -InputFile C:\terms.xml -Verbose</dev:code>
         <dev:remarks>
-          <maml:para>This example imports the terms from c:\terms.xml to the Term Set with ID "6067b6a8-9866-40db-962d-84097f22619a".</maml:para>
+          <maml:para>This example imports the terms from c:\terms.xml to the Term Store at index position 0.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -7404,7 +7593,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a Term Group object.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7412,12 +7601,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOTermGroup</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a Term Group object.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7556,7 +7745,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7564,12 +7753,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOListViewWebPart</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7882,7 +8071,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -7890,12 +8079,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Add</command:verb>
       <command:noun>SPOWebPart</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Adds a web part to a web part page or wiki page.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8118,16 +8307,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/sitepages/home.aspx" -WebPart "c:\announcements.webpart" -Row 1 -Column 1 -AddSpace</dev:code>
+        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/default.aspx" -WebPart "c:\announcements.webpart" -Title "Announcements" -Zone "MiddleColumn" -ZoneIndex 1</dev:code>
         <dev:remarks>
-          <maml:para>This example adds an announcements web part to the home.aspx wiki page located in the root web of the root site collection.</maml:para>
+          <maml:para>This example adds an announcements web part to the default.aspx web part page located in the root web of the root site collection.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/default.aspx" -WebPart "c:\announcements.webpart" -Title "Announcements" -Zone "MiddleColumn" -ZoneIndex 1</dev:code>
+        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/sitepages/home.aspx" -WebPart "c:\announcements.webpart" -Row 1 -Column 1 -AddSpace</dev:code>
         <dev:remarks>
-          <maml:para>This example adds an announcements web part to the default.aspx web part page located in the root web of the root site collection.</maml:para>
+          <maml:para>This example adds an announcements web part to the home.aspx wiki page located in the root web of the root site collection.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -8150,7 +8339,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Gets a web part or list of web parts from a web part page or wiki page.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8158,12 +8347,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Get</command:verb>
       <command:noun>SPOWebPart</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Gets a web part or list of web parts from a web part page or wiki page.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8259,16 +8448,16 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
     <command:examples>
       <command:example>
         <maml:title>------------------EXAMPLE 1-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/default.aspx" -WebPart "c:\announcements.webpart" -Title "Announcements" -Zone "MiddleColumn" -ZoneIndex 1</dev:code>
+        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/sitepages/home.aspx" -WebPart "c:\announcements.webpart" -Row 1 -Column 1 -AddSpace</dev:code>
         <dev:remarks>
-          <maml:para>This example adds an announcements web part to the default.aspx web part page located in the root web of the root site collection.</maml:para>
+          <maml:para>This example adds an announcements web part to the home.aspx wiki page located in the root web of the root site collection.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>------------------EXAMPLE 2-----------------------</maml:title>
-        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/sitepages/home.aspx" -WebPart "c:\announcements.webpart" -Row 1 -Column 1 -AddSpace</dev:code>
+        <dev:code>PS C:\&gt; Add-SPOWebPart -Web "/" -File "/default.aspx" -WebPart "c:\announcements.webpart" -Title "Announcements" -Zone "MiddleColumn" -ZoneIndex 1</dev:code>
         <dev:remarks>
-          <maml:para>This example adds an announcements web part to the home.aspx wiki page located in the root web of the root site collection.</maml:para>
+          <maml:para>This example adds an announcements web part to the default.aspx web part page located in the root web of the root site collection.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -8291,7 +8480,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Sets the layout for a wiki page within an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8299,12 +8488,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>Set</command:verb>
       <command:noun>SPOWikiPageLayout</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Sets the layout for a wiki page within an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8470,7 +8659,7 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
         <maml:para>Creates a new wiki page within an existing List.</maml:para>
       </maml:description>
       <maml:copyright>
-        <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+        <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
         <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
         <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
         <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
@@ -8478,12 +8667,12 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
       </maml:copyright>
       <command:verb>New</command:verb>
       <command:noun>SPOWikiPage</command:noun>
-      <dev:version>1.2.6.0</dev:version>
+      <dev:version>1.3.0.0</dev:version>
     </command:details>
     <maml:description>
       <maml:para>Creates a new wiki page within an existing List.</maml:para>
       <maml:para />
-      <maml:para>Copyright 2015 Falchion Consulting, LLC</maml:para>
+      <maml:para>Copyright 2016 Falchion Consulting, LLC</maml:para>
       <maml:para>  &gt; For more information on this cmdlet and others:</maml:para>
       <maml:para>  &gt; http://blog.falchionconsulting.com/</maml:para>
       <maml:para>  &gt; Use of this cmdlet is at your own risk.</maml:para>
