@@ -3,7 +3,7 @@
   [string] $ConfigurationName = $(throw "ConfigurationName is required!")
 )
 $path = Split-Path -parent $MyInvocation.MyCommand.Definition  
-$helpAsm = "$($TargetDir)\Lapointe.PowerShell.MamlGenerator.dll"
+$helpAsm = "$($TargetDir)\..\..\ReferenceAssemblies\Lapointe.PowerShell.MamlGenerator.dll"
 $cmdletAsm = "$($TargetDir)\Lapointe.SharePointOnline.PowerShell.dll"
 Write-Host "Help generation work path: $path"
 Write-Host "Help generation maml assembly path: $helpAsm"

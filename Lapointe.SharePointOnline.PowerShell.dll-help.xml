@@ -1786,33 +1786,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Options</maml:name>
           <command:parameterValue required="true">DefaultValue | AddToDefaultContentType | AddToNoContentType | AddToAllContentTypes | AddFieldInternalNameHint | AddFieldToDefaultView | AddFieldCheckDisplayName</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Web</maml:name>
-          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="true" position="3">
-          <maml:name>SchemaXml</maml:name>
-          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>Options</maml:name>
-          <command:parameterValue required="true">DefaultValue | AddToDefaultContentType | AddToNoContentType | AddToAllContentTypes | AddFieldInternalNameHint | AddFieldToDefaultView | AddFieldCheckDisplayName</command:parameterValue>
-        </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>New-SPOField</maml:name>
-        <command:parameter required="true" position="1">
-          <maml:name>Web</maml:name>
-          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="true" position="3">
-          <maml:name>SchemaXml</maml:name>
-          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>Options</maml:name>
-          <command:parameterValue required="true">DefaultValue | AddToDefaultContentType | AddToNoContentType | AddToAllContentTypes | AddFieldInternalNameHint | AddFieldToDefaultView | AddFieldCheckDisplayName</command:parameterValue>
-        </command:parameter>
         <command:parameter required="true" position="1">
           <maml:name>Web</maml:name>
           <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
@@ -1983,9 +1959,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>File</maml:name>
           <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="2">
-          <maml:name>File</maml:name>
-          <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>TargetFolder</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>Overwrite</maml:name>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -1998,9 +1982,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Recursive</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="2">
-          <maml:name>File</maml:name>
-          <command:parameterValue required="true">SPOFilePipeBind[]</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>TargetFolder</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>Overwrite</maml:name>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -2546,9 +2538,21 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>List</maml:name>
           <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>Overwrite</maml:name>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="6">
+          <maml:name>FieldValues</maml:name>
+          <command:parameterValue required="true">PropertiesPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -2557,9 +2561,21 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Folder</maml:name>
           <command:parameterValue required="true">SPOFolder</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>Overwrite</maml:name>
+          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="6">
+          <maml:name>FieldValues</maml:name>
+          <command:parameterValue required="true">PropertiesPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -3560,117 +3576,13 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ValidationMessage</maml:name>
           <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
         <command:parameter required="false" position="2">
-          <maml:name>ContentTypesEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>DefaultContentApprovalWorkflowId</maml:name>
-          <command:parameterValue required="true">Guid</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>DefaultDisplayFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>DefaultEditFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>DefaultNewFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>Direction</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>DocumentTemplateUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>DraftVersionVisibility</maml:name>
-          <command:parameterValue required="true">Reader | Author | Approver</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>EnableAttachments</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>EnableFolderCreation</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>EnableMinorVersions</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>EnableModeration</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>EnableVersioning</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>ForceCheckout</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="17">
-          <maml:name>Hidden</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="18">
-          <maml:name>ImageUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="19">
-          <maml:name>IrmEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="20">
-          <maml:name>IrmExpire</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="21">
-          <maml:name>IrmReject</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="22">
-          <maml:name>IsApplicationList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="23">
-          <maml:name>LastItemModifiedDate</maml:name>
-          <command:parameterValue required="true">DateTime</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="24">
-          <maml:name>MultipleDataList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="25">
-          <maml:name>NoCrawl</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="26">
-          <maml:name>OnQuickLaunch</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="27">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="28">
-          <maml:name>ValidationFormula</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="29">
-          <maml:name>ValidationMessage</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -3687,117 +3599,13 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ClearScopes</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
         <command:parameter required="false" position="2">
-          <maml:name>ContentTypesEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>DefaultContentApprovalWorkflowId</maml:name>
-          <command:parameterValue required="true">Guid</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>DefaultDisplayFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>DefaultEditFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>DefaultNewFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>Direction</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>DocumentTemplateUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>DraftVersionVisibility</maml:name>
-          <command:parameterValue required="true">Reader | Author | Approver</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>EnableAttachments</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>EnableFolderCreation</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>EnableMinorVersions</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>EnableModeration</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>EnableVersioning</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>ForceCheckout</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="17">
-          <maml:name>Hidden</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="18">
-          <maml:name>ImageUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="19">
-          <maml:name>IrmEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="20">
-          <maml:name>IrmExpire</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="21">
-          <maml:name>IrmReject</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="22">
-          <maml:name>IsApplicationList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="23">
-          <maml:name>LastItemModifiedDate</maml:name>
-          <command:parameterValue required="true">DateTime</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="24">
-          <maml:name>MultipleDataList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="25">
-          <maml:name>NoCrawl</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="26">
-          <maml:name>OnQuickLaunch</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="27">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="28">
-          <maml:name>ValidationFormula</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="29">
-          <maml:name>ValidationMessage</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -3806,117 +3614,13 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ResetRoleInheritance</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
         <command:parameter required="false" position="2">
-          <maml:name>ContentTypesEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>DefaultContentApprovalWorkflowId</maml:name>
-          <command:parameterValue required="true">Guid</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>DefaultDisplayFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>DefaultEditFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>DefaultNewFormUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>Direction</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>DocumentTemplateUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>DraftVersionVisibility</maml:name>
-          <command:parameterValue required="true">Reader | Author | Approver</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>EnableAttachments</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>EnableFolderCreation</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>EnableMinorVersions</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>EnableModeration</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>EnableVersioning</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>ForceCheckout</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="17">
-          <maml:name>Hidden</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="18">
-          <maml:name>ImageUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="19">
-          <maml:name>IrmEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="20">
-          <maml:name>IrmExpire</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="21">
-          <maml:name>IrmReject</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="22">
-          <maml:name>IsApplicationList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="23">
-          <maml:name>LastItemModifiedDate</maml:name>
-          <command:parameterValue required="true">DateTime</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="24">
-          <maml:name>MultipleDataList</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="25">
-          <maml:name>NoCrawl</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="26">
-          <maml:name>OnQuickLaunch</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="27">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="28">
-          <maml:name>ValidationFormula</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="29">
-          <maml:name>ValidationMessage</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -4965,65 +4669,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>AssociatedVisitorGroup</maml:name>
           <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>CustomMasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>MasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>EnableMinimalDownload</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>QuickLaunchEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>SaveSiteAsTemplateEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>ServerRelativeUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>SyndicationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>TreeViewEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>UIVersion</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>UIVersionConfigurationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>AssociatedMemberGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>AssociatedOwnerGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>AssociatedVisitorGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -5040,65 +4688,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ClearScopes</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>CustomMasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>MasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>EnableMinimalDownload</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>QuickLaunchEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>SaveSiteAsTemplateEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>ServerRelativeUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>SyndicationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>TreeViewEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>UIVersion</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>UIVersionConfigurationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>AssociatedMemberGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>AssociatedOwnerGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>AssociatedVisitorGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -5107,65 +4699,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ResetRoleInheritance</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>CustomMasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="3">
-          <maml:name>MasterUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="4">
-          <maml:name>Title</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="5">
-          <maml:name>Description</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="6">
-          <maml:name>EnableMinimalDownload</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="7">
-          <maml:name>QuickLaunchEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="8">
-          <maml:name>SaveSiteAsTemplateEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>ServerRelativeUrl</maml:name>
-          <command:parameterValue required="true">String</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="10">
-          <maml:name>SyndicationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="11">
-          <maml:name>TreeViewEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="12">
-          <maml:name>UIVersion</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="13">
-          <maml:name>UIVersionConfigurationEnabled</maml:name>
-          <command:parameterValue required="true">Boolean</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="14">
-          <maml:name>AssociatedMemberGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="15">
-          <maml:name>AssociatedOwnerGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
-        </command:parameter>
-        <command:parameter required="false" position="16">
-          <maml:name>AssociatedVisitorGroup</maml:name>
-          <command:parameterValue required="true">SPOGroupPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Identity</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -7033,9 +6569,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Tenant</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>OutputFile</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7044,9 +6580,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>TermStore</maml:name>
           <command:parameterValue required="true">SPOTermStorePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>OutputFile</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7055,9 +6591,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Group</maml:name>
           <command:parameterValue required="true">SPOTermGroupPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>OutputFile</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7066,9 +6602,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>TermSet</maml:name>
           <command:parameterValue required="true">SPOTermSetPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>OutputFile</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7077,9 +6613,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Term</maml:name>
           <command:parameterValue required="true">SPOTermPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>OutputFile</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -7375,9 +6911,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Tenant</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>InputFile</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7386,9 +6922,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ParentTermStore</maml:name>
           <command:parameterValue required="true">SPOTermStorePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>InputFile</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7397,9 +6933,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ParentGroup</maml:name>
           <command:parameterValue required="true">SPOTermGroupPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>InputFile</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7408,9 +6944,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ParentTermSet</maml:name>
           <command:parameterValue required="true">SPOTermSetPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>InputFile</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7419,9 +6955,9 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ParentTerm</maml:name>
           <command:parameterValue required="true">SPOTermPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="1">
-          <maml:name>Tenant</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>InputFile</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -7775,17 +7311,37 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ZoneIndex</maml:name>
           <command:parameterValue required="true">Int32</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="7">
-          <maml:name>Row</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="8">
-          <maml:name>Column</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>AddSpace</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>List</maml:name>
+          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ViewTitle</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ViewSchema</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="4">
+          <maml:name>Title</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="10">
+          <maml:name>JSLink</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ChromeType</maml:name>
+          <command:parameterValue required="true">Default | TitleAndBorder | None | TitleOnly | BorderOnly</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -7802,17 +7358,37 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>AddSpace</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="7">
-          <maml:name>Row</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="8">
-          <maml:name>Column</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>AddSpace</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="2">
+          <maml:name>List</maml:name>
+          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ViewTitle</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ViewSchema</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="4">
+          <maml:name>Title</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="10">
+          <maml:name>JSLink</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="named">
+          <maml:name>ChromeType</maml:name>
+          <command:parameterValue required="true">Default | TitleAndBorder | None | TitleOnly | BorderOnly</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -8101,17 +7677,21 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>ZoneIndex</maml:name>
           <command:parameterValue required="true">Int32</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="7">
-          <maml:name>Row</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="8">
-          <maml:name>Column</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>AddSpace</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="3">
+          <maml:name>WebPart</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="4">
+          <maml:name>Title</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -8128,17 +7708,21 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>AddSpace</maml:name>
           <command:parameterValue required="true">SwitchParameter</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="7">
-          <maml:name>Row</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="true" position="8">
-          <maml:name>Column</maml:name>
-          <command:parameterValue required="true">Int32</command:parameterValue>
+        <command:parameter required="false" position="2">
+          <maml:name>File</maml:name>
+          <command:parameterValue required="true">SPOFilePipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="9">
-          <maml:name>AddSpace</maml:name>
-          <command:parameterValue required="true">SwitchParameter</command:parameterValue>
+        <command:parameter required="true" position="3">
+          <maml:name>WebPart</maml:name>
+          <command:parameterValue required="true">XmlDocumentPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="4">
+          <maml:name>Title</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -8506,9 +8090,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>List</maml:name>
           <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>WikiPageName</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="5">
+          <maml:name>WikiPageLayout</maml:name>
+          <command:parameterValue required="true">OneColumn | OneColumnSideBar | TwoColumns | TwoColumnsHeader | TwoColumnsHeaderFooter | ThreeColumns | ThreeColumnsHeader | ThreeColumnsHeaderFooter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -8517,9 +8109,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Folder</maml:name>
           <command:parameterValue required="true">SPOFolder</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>WikiPageName</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="5">
+          <maml:name>WikiPageLayout</maml:name>
+          <command:parameterValue required="true">OneColumn | OneColumnSideBar | TwoColumns | TwoColumnsHeader | TwoColumnsHeaderFooter | ThreeColumns | ThreeColumnsHeader | ThreeColumnsHeaderFooter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
@@ -8685,9 +8285,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>List</maml:name>
           <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>WikiPageName</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>WikiPageLayout</maml:name>
+          <command:parameterValue required="true">OneColumn | OneColumnSideBar | TwoColumns | TwoColumnsHeader | TwoColumnsHeaderFooter | ThreeColumns | ThreeColumnsHeader | ThreeColumnsHeaderFooter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
@@ -8696,9 +8304,17 @@ PS C:\&gt; Invoke-SPORestMethod "https://contoso.sharepoint.com/_api/web"</dev:c
           <maml:name>Folder</maml:name>
           <command:parameterValue required="true">SPOFolder</command:parameterValue>
         </command:parameter>
-        <command:parameter required="false" position="2">
-          <maml:name>List</maml:name>
-          <command:parameterValue required="true">SPOListPipeBind</command:parameterValue>
+        <command:parameter required="true" position="1">
+          <maml:name>Web</maml:name>
+          <command:parameterValue required="true">SPOWebPipeBind</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" position="4">
+          <maml:name>WikiPageName</maml:name>
+          <command:parameterValue required="true">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" position="5">
+          <maml:name>WikiPageLayout</maml:name>
+          <command:parameterValue required="true">OneColumn | OneColumnSideBar | TwoColumns | TwoColumnsHeader | TwoColumnsHeaderFooter | ThreeColumns | ThreeColumnsHeader | ThreeColumnsHeaderFooter</command:parameterValue>
         </command:parameter>
       </command:syntaxItem>
     </command:syntax>
