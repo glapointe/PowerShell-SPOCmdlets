@@ -17,6 +17,8 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets.Sites
     [RelatedCmdlets(typeof(ConnectSPOSite), typeof(GetSPOWeb))]
     [Example(Code = "PS C:\\> New-SPOWeb -ParentWeb \"/\" -Url \"childsite\" -WebTemplate \"STS#0\" -Title \"Child Site\" -UseSamePermissionsAsParentSite",
         Remarks = "This example creates a new child site with the URL name of childsite under the root Site of the current Site Collection.")]
+    [Example(Code = "PS C:\\> New-SPOWeb -ParentWeb \"/sites/sitecol1\" -Url \"childsite\" -WebTemplate \"STS#0\" -Title \"Child Site\" -UseSamePermissionsAsParentSite",
+        Remarks = "This example creates a new child site with the URL name of childsite under the sitecol1 Site of the current Site Collection (you must be connected to this site collection).")]
     public class NewSPOWeb : BaseSPOCmdlet
     {
         [ValidateNotNullOrEmpty,

@@ -70,18 +70,27 @@ namespace Lapointe.SharePointOnline.PowerShell.Cmdlets.Sites
             }
             if (web.Webs.Count > 0)
             {
+                var toDelete = new List<Web>();
+
                 foreach (Web childWeb in web.Webs)
+                {
+                    toDelete.Add(childWeb);
+                }
+
+                foreach (Web childWeb in toDelete)
                 {
                     Delete(childWeb);
                 }
                 if (web.Webs.Count == 0)
                 {
+                    try { WriteVerbose("Deleting " + web.Url); } catch { }
                     web.DeleteObject();
                     web.Context.ExecuteQuery();
                 }
             }
             else
             {
+                try { WriteVerbose("Deleting " + web.Url); } catch { }
                 web.DeleteObject();
                 web.Context.ExecuteQuery();
             }
